@@ -36,3 +36,86 @@
     transform: rotate(360deg);
   }
 }
+
+.map-h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 20px;
+  padding-left: 10px;
+  text-align: center;
+}
+
+.google-map {
+  width: 90%;
+  height: 60vh;
+  margin: 0 auto;
+}
+
+.pin {
+  display: flex;
+  align-items: center;
+  width: 180px;
+  color: var(--main-blue);
+}
+
+.pin-icon {
+  font-size: 0.5rem;
+}
+
+.pin-text {
+  font-size: 1.3em;
+}
+
+.card {
+  max-width: 18rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 799px) {
+  .google-map {
+    height: 80vh;
+  }
+
+  .map-h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  .pin {
+    width: 15vw;
+  }
+
+  .pin-icon {
+    font-size: 4vw;
+  }
+}
+
+.marker {
+  position: absolute;
+  width: 38px;
+  height: 37px;
+  background-image: url(https://icon-library.com/images/pin-icon-png/pin-icon-png-9.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  cursor: grab;
+}
+
+.autocomplete {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  text-align:center;
+}
+
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: #ccc;
+}
