@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Trash } from 'react-bootstrap-icons';
 
-const ListLocations = ({ locationsList, deleteList, onRemoveMany=()=>{} , onSelect=()=>{}, onDeleteOne=()=>{} }) => {
+const ListLocations = ({ locationsList, deleteList, onRemoveMany , onSelect, onDeleteOne }) => {
 
   const [checkedState, setCheckedState] = useState(
     new Array(locationsList.length).fill(false)
@@ -21,7 +21,7 @@ const ListLocations = ({ locationsList, deleteList, onRemoveMany=()=>{} , onSele
         onDeleteOne(data);
       })
     }
-  }, [toDeleteId])
+  }, [onDeleteOne, toDeleteId])
 
   const handleOnChange = (position, location) => {
     let existe = false;

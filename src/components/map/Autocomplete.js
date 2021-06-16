@@ -24,7 +24,7 @@ const AutoComplete = ({ onAdd }) => {
         onAdd(data);
       })
     }
-  }, [finalLocation])
+  }, [finalLocation, onAdd])
 
   const handleSelect = async (value) => {
     const results = await geocodeByAddress(value);

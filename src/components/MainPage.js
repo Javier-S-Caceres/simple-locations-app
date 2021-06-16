@@ -32,11 +32,11 @@ const MainPage = () => {
     console.log('En Delete many'+JSON.stringify(newList))
   }
 
-  const handleSelect = (location) => {
+  const handleSelect = async (location) => {
     setLoading(true);
     const newLocation = location;
-    setSelectedLocation(newLocation);
-
+    await setSelectedLocation(newLocation);
+    setLoading(false);
   }
 
   const handleAdd = (location) => {
